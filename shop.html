@@ -4,12 +4,218 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>shop</title>
-    <link rel="stylesheet" href="">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <script src=""></script>
-</body>
+    <!-- Filter TEMPLATES  -->
+    <template id="filter_btns_tmpl">
+        <h3>Huop</h3>
+    </template>
+    <!-- template fag-->
+    <template id="course_header_tmpl">
+        <h1>Huop</h1>
+        <section class="fag_section"></section>
+    </template>
+    <!-- template fag-->
+    <template id="fag_tmpl">
+        <section class="fag">
+            <img src="" alt="">
+            <div class="fag_container">
+                <h2></h2>
+            </div>
+        </section>
+    </template>
 
-</html>
+
+
+
+
+    <!--SITE MENU-->
+
+
+
+    <header>
+        <div id=color></div>
+
+
+
+
+
+
+        <nav class="topnav" id="myTopnav">
+            <a href="fremkaldelse.html">Fremkaldelse</a>
+            <a href="shop.html">Shop</a>
+            <a href="guide.html">Analogguiden</a>
+            <div class="dropdown">
+                <div class="dropbtn">
+                    <i class="fa fa-caret-down"></i>
+                </div>
+
+                <div id="logo">
+                    <a href="index.html">
+                        <img class="logobillede" alt="" src="imgs/logo2.svg">
+                    </a>
+                </div>
+
+                <div class="dropdown-content">
+                    <a href="dias.html">Diasscan</a>
+                    <a href="hvem.html">hvem er vi</a>
+                    <a href="st%C3%B8ttemuligheder.html">Støttemuligheder</a>
+                    <a href="faciliteter.html">Faciliteter</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class="dropbtn">Om
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <div class="dropdown-content">
+                    <a href="personale.html">Personale</a>
+                    <a href="Bestyrelse.html">Bestyrelse</a>
+                    <a href="erhverv.html">Erhverv</a>
+                    <a href="elevforening.html">Elevforening</a>
+                </div>
+            </div>
+            <a href="kontakt.html">Kontakt</a>
+            <a href="tilmelding.html" id="cta">Kurv</a>
+            <a href="javascript:void(0);" style="font-size:25px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </nav>
+
+    </header>
+
+
+    <!--   Filter  navigation -->
+    <section id="filter-overskrift">
+        <div>
+            <h1>Film</h1>
+        </div>
+
+
+    </section>
+    <section id="filter-menu">
+
+
+        <nav class="filter_nav">
+            <h3></h3>
+        </nav>
+    </section>
+    <!--  fag  -->
+    <main class="fags fag_section"></main>
+
+
+    <script>
+        "use strict"
+
+
+        let theCategories;
+
+        let theFag;
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+
+            getTheCategories();
+        }
+
+        async function getTheCategories() {
+            let url = "http://davidpauner.dk/kea/10_Eksamen/wordpress/wp-json/wp/v2/analogshopgruppe";
+            let jsonData = await fetch(url);
+            theCategories = await jsonData.json();
+            generateCategoryBTNs();
+
+            getTheFag();
+
+        }
+
+
+        async function getTheFag() {
+
+
+            let url = "http://davidpauner.dk/kea/10_Eksamen/wordpress/wp-json/wp/v2/film?per_page=100";
+
+            let jsonData = await fetch(url);
+            theFag = await jsonData.json();
+            console.log("LOADING DONE");
+
+
+            document.querySelector(".filter_nav h3").click();
+        }
+
+
+        function generateCategoryBTNs() {
+
+            let dest = document.querySelector(".filter_nav");
+            let temp = document.querySelector("#filter_btns_tmpl");
+
+            document.querySelector(".filter_nav h3").dataset.id = "alle";
+            document.querySelector(".filter_nav h3").addEventListener("click", categoryClick);
+            theCategories.forEach(category => {
+                // fjern uncategorised
+                if (category.slug != "uncategorised") {
+                    let klon = temp.cloneNode(true).content;
+                    klon.querySelector("h3").textContent = category.name;
+                    klon.querySelector("h3").dataset.name = category.name;
+                    klon.querySelector("h3").dataset.id = category.id;
+
+                    klon.querySelector("h3").addEventListener("click", categoryClick)
+                    dest.appendChild(klon);
+                }
+
+            })
+        }
+
+        function categoryClick() {
+
+            console.log(this.dataset.id);
+
+            filterContent(this.dataset.id);
+
+            document.querySelectorAll(".filter_nav h3").forEach(each => each.classList.remove("valgt"));
+            this.classList.add("valgt");
+
+        }
+
+        function filterContent(theFilter) {
+            let filtrerede;
+            if (theFilter == "alle") {
+                filtrerede = theFag;
+            } else {
+                filtrerede = theFag.filter(fag => fag.analogshopgruppe[0] == theFilter);
+            }
+            console.log(filtrerede);
+            showPosts(filtrerede);
+        }
+
+        function showPosts(theFilteredJson) {
+
+            let dest = document.querySelector(".fags");
+            let temp = document.querySelector("#fag_tmpl");
+            dest.innerHTML = "";
+
+            theFilteredJson.forEach(fag => {
+
+                let klon = temp.cloneNode(true).content;
+                klon.querySelector("h2").textContent = fag.title.rendered;
+                klon.querySelector("img").src = fag.billede.guid;
+
+
+                klon.querySelector(".fag").addEventListener("click", function() {
+                    dishClick(fag.id)
+                });
+
+                dest.appendChild(klon);
+
+
+            });
+        }
+
+        function dishClick(id) {
+            console.log("id", id)
+            window.location.href = "singleview.html?id=" + id;
+        }
+    </script>
+    <script src="script.js"></script>
+</body></html>
