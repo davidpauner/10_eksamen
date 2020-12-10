@@ -1,15 +1,95 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="da">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>forside</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <script src=""></script>
-</body>
+<header>
+    <div id=color></div>
 
-</html>
+
+
+
+
+
+    <nav class="topnav" id="myTopnav">
+        <a href="fremkaldelse.html">Fremkaldelse</a>
+        <a href="shop.html">Shop</a>
+        <a href="guide.html">Analogguiden</a>
+        <div class="dropdown">
+            <div class="dropbtn">
+                <i class="fa fa-caret-down"></i>
+            </div>
+
+            <div id="logo">
+                <a href="index.html">
+                    <img class="logobillede" alt="" src="imgs/logo2.svg">
+                </a>
+            </div>
+
+            <div class="dropdown-content">
+                <a href="dias.html">Diasscan</a>
+                <a href="hvem.html">hvem er vi</a>
+                <a href="st%C3%B8ttemuligheder.html">Støttemuligheder</a>
+                <a href="faciliteter.html">Faciliteter</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <div class="dropbtn">Om
+                <i class="fa fa-caret-down"></i>
+            </div>
+            <div class="dropdown-content">
+                <a href="personale.html">Personale</a>
+                <a href="Bestyrelse.html">Bestyrelse</a>
+                <a href="erhverv.html">Erhverv</a>
+                <a href="elevforening.html">Elevforening</a>
+            </div>
+        </div>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="tilmelding.html" id="cta">Kurv</a>
+        <a href="javascript:void(0);" style="font-size:25px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </nav>
+
+</header>
+
+<body>
+
+
+
+    <main id="forside">
+
+        <section class="indhold"></section>
+
+    </main>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+        const listeElm = document.querySelector("#om");
+
+
+        const url = "http://davidpauner.dk/kea/10_Eksamen/wordpress/wp-json/wp/v2/pages/123"
+
+        /*"http://tlravn.dk/kea/09-tema/passion/wordpress/wp-json/wp/v2/pages/265"*/
+
+        async function start() {
+            const resspons = await fetch(url)
+            const json = await resspons.json();
+            vis(json);
+        }
+
+        function vis(album) {
+            console.log(album)
+
+
+            document.querySelector(".indhold").innerHTML = album.content.rendered;
+
+
+        }
+    </script>
+</body></html>
