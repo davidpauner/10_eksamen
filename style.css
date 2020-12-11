@@ -308,15 +308,24 @@ a {
 }
 
 .analog_column {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     width: 80vw;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 3fr));
-    grid-gap: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 3fr));
+    grid-gap: 0px;
     padding-top: 60px;
 
+
 }
+
+.guide-grid {
+    border: 1px solid black;
+    padding: 50px;
+    margin-left: -1px;
+
+}
+
 
 /************ midterlinje  ***************/
 
