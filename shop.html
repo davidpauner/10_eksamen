@@ -38,18 +38,27 @@
     <template id="filter_btns_tmpl">
         <h3>Huop</h3>
     </template>
+
+
+
     <!-- template fag-->
     <template id="course_header_tmpl">
         <h1>Huop</h1>
         <section class="fag_section"></section>
     </template>
+
+
+
     <!-- template fag-->
     <template id="fag_tmpl">
         <section class="fag">
             <img src="" alt="">
             <div class="fag_container">
                 <h2></h2>
+                <h3 class="pris"></h3>
+                <button id="button">Køb</button>
             </div>
+
         </section>
     </template>
 
@@ -66,7 +75,7 @@
     <!--   Filter  navigation -->
     <section id="filter-overskrift">
         <div>
-            <h1>Film</h1>
+            <h1>Shop</h1>
         </div>
 
 
@@ -80,6 +89,8 @@
     </section>
     <!--  fag  -->
     <main class="fags fag_section"></main>
+    <section class="fags fag_section"></section>
+
 
 
     <script>
@@ -177,6 +188,7 @@
                 let klon = temp.cloneNode(true).content;
                 klon.querySelector("h2").textContent = fag.title.rendered;
                 klon.querySelector("img").src = fag.billede.guid;
+                klon.querySelector(".pris").textContent = fag.pris;
 
 
                 klon.querySelector(".fag").addEventListener("click", function() {
@@ -193,6 +205,9 @@
             console.log("id", id)
             window.location.href = "singleview.html?id=" + id;
         }
+
     </script>
     <script src="script.js"></script>
-</body></html>
+</body>
+
+</html>

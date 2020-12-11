@@ -29,7 +29,7 @@ h1 {
 }
 
 h2 {
-    color: white;
+    color: #121212;
     font-weight: 300;
     font-size: 1.1rem;
     letter-spacing: 0.09rem;
@@ -38,9 +38,9 @@ h2 {
 }
 
 h3 {
-
-    font-weight: 600;
-    font-size: 1.1rem;
+    color: black;
+    font-weight: 400;
+    font-size: 1rem;
     letter-spacing: 0.04rem;
     text-transform: uppercase;
 }
@@ -114,6 +114,89 @@ a {
 #brugermenu-none {
     display: none;
 }
+
+/**** shop ***/
+
+#filter-menu {
+    display: flex;
+    margin: 50px 0 50px 0px;
+
+
+}
+
+.filter_nav h3 {
+    cursor: pointer;
+    padding: 15px 50px 15px 50px;
+    border-left: 2px solid black;
+
+
+}
+
+.filter_nav h3:first-child {
+    cursor: pointer;
+    padding: 0px 0px 0px 0px;
+    margin-left: -2px;
+    border: none;
+
+
+}
+
+.filter_nav {
+    display: flex;
+    overflow: scroll;
+    border: 2px solid black;
+}
+
+.fag_section {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 70vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 40px;
+
+}
+
+.valgt {
+    background: black;
+    color: #ffffff;
+
+}
+
+#alle {
+    display: none;
+
+}
+
+#filter-overskrift {
+    display: flex;
+    margin: 50px 0 30px 0px;
+    flex-direction: column;
+
+}
+
+.fag_container {
+
+    text-align: center;
+    margin: -4px 0 0 0;
+    padding: 30px 0px 30px 0px;
+
+
+
+}
+
+/*
+    max-width: 2100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(25, 300px [col-start]);
+    grid-gap: 40px;
+    overflow: scroll;
+*/
+
+
+
+
 
 @media screen and (max-width: 900px) {
 
