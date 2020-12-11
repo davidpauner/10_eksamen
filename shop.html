@@ -188,7 +188,7 @@
                 let klon = temp.cloneNode(true).content;
                 klon.querySelector("h2").textContent = fag.title.rendered;
                 klon.querySelector("img").src = fag.billede.guid;
-                klon.querySelector(".pris").textContent = fag.pris;
+                klon.querySelector(".pris").textContent = fag.pris + " kr";
 
 
                 klon.querySelector(".fag").addEventListener("click", function() {
@@ -205,9 +205,6 @@
             console.log("id", id)
             window.location.href = "singleview.html?id=" + id;
         }
-
     </script>
     <script src="script.js"></script>
-</body>
-
-</html>
+</body></html>

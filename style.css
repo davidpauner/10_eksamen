@@ -31,16 +31,16 @@ h1 {
 
 h2 {
     color: #121212;
-    font-weight: 500;
-    font-size: 1.2rem;
+    font-weight: 600;
+    font-size: 1.5rem;
     letter-spacing: 0.09rem;
     text-transform: uppercase;
 
 }
 
 h3 {
-    color: black;
-    font-weight: 400;
+    color: #5a5a5a;
+    font-weight: 500;
     font-size: 1rem;
     letter-spacing: 0.04rem;
     text-transform: uppercase;
@@ -72,7 +72,8 @@ p {
     font-size: 0.8rem;
     letter-spacing: 0.06rem;
     text-transform: uppercase;
-    max-width: 250px;
+    max-width: 300px;
+    margin: 0;
 
 }
 
@@ -201,6 +202,148 @@ a {
 
 
 
+
+
+
+/****** sections *********/
+
+.section_2_columns {
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 70vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 2fr));
+    grid-gap: 130px;
+    padding-top: 60px;
+
+}
+
+.section_3_columns {
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 70vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 2fr));
+    grid-gap: 130px;
+    padding-top: 60px;
+
+}
+
+.analog_column {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 80vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 3fr));
+    grid-gap: 0px;
+    padding-top: 60px;
+
+
+}
+
+.guide-grid {
+    border: 1px solid black;
+    padding: 50px;
+    margin-left: -1px;
+
+}
+
+
+
+
+/****** singleview-fremkaldelse *********/
+
+#linje {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    padding: 70px 0 0px 0;
+    width: 70vw;
+
+
+}
+
+
+
+.col-75 {
+    float: left;
+    width: 100%;
+    margin: 5px 0 25px 0;
+
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin: 5px 0 25px 0;
+    margin-right: 300px;
+}
+
+
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #525252;
+    resize: vertical;
+    margin: 0;
+    float: left;
+
+
+}
+
+.tekst {
+    min-width: 80%;
+    margin: 0;
+
+
+}
+
+.tekst h2 {
+    margin-bottom: 25px;
+}
+
+.tekst h3 {
+    margin: 25px 0 25px 0;
+}
+
+
+/****** section 2 font padding *********/
+
+.tekst h2 {
+    margin-bottom: 25px;
+}
+
+.tekst p {
+    margin-bottom: 25px;
+}
+
+
+/************ midterlinje  ***************/
+
+@media screen and (min-width: 1200px) {
+
+    .midterlinje {
+        position: relative;
+    }
+
+
+    .midterlinje::after {
+        content: '';
+        position: absolute;
+        width: 1px;
+        background-color: black;
+        top: 53px;
+        bottom: 100px;
+        left: 50%;
+        margin-left: -1px;
+    }
+
+}
+
+
 @media screen and (max-width: 900px) {
 
     /* The sidepanel menu */
@@ -278,126 +421,5 @@ a {
         display: none;
     }
 
-
-}
-
-
-
-/****** sections *********/
-
-.section_2_columns {
-    max-width: 1000px;
-    margin: 0 auto;
-    width: 70vw;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 2fr));
-    grid-gap: 130px;
-    padding-top: 60px;
-
-}
-
-.section_3_columns {
-    max-width: 1000px;
-    margin: 0 auto;
-    width: 70vw;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 2fr));
-    grid-gap: 130px;
-    padding-top: 60px;
-
-}
-
-.analog_column {
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 80vw;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 3fr));
-    grid-gap: 0px;
-    padding-top: 60px;
-
-
-}
-
-.guide-grid {
-    border: 1px solid black;
-    padding: 50px;
-    margin-left: -1px;
-
-}
-
-
-/************ midterlinje  ***************/
-
-
-.midterlinje {
-    position: relative;
-}
-
-
-.midterlinje::after {
-    content: '';
-    position: absolute;
-    width: 1px;
-    background-color: black;
-    top: 53px;
-    bottom: 0;
-    left: 50%;
-    margin-left: -1px;
-}
-
-/****** singleview-fremkaldelse *********/
-
-#linje {
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid black;
-    padding: 70px 0 0px 0;
-    width: 70vw;
-
-
-}
-
-
-
-.col-75 {
-    float: left;
-    width: 100%;
-    margin-top: 16px;
-}
-
-.col-25 {
-    float: left;
-    width: 50%;
-    margin-top: 6px;
-}
-
-input[type=submit] {
-    background-color: #4CAF50;
-    color: white;
-    min-width: 300px;
-    padding: 22px 20px;
-    border: none;
-    border-radius: 0px;
-    cursor: pointer;
-    float: right;
-}
-
-input[type=text],
-select,
-textarea {
-    width: 100%;
-
-    padding: 12px;
-    border: 1px solid #525252;
-    border-radius: 0px;
-    resize: vertical;
-}
-
-.tekst {
-    min-width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
 
 }

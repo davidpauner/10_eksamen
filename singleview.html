@@ -8,35 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <style>
-        .section_2_columns {
-            max-width: 1000px;
-            margin: 0 auto;
-            width: 70vw;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 2fr));
-            grid-gap: 170px;
-            padding-top: 60px;
 
-        }
-
-        /************ midterlinje  ***************/
-
-
-        .midterlinje {
-            position: relative;
-        }
-
-
-        .midterlinje::after {
-            content: '';
-            position: absolute;
-            width: 1px;
-            background-color: black;
-            top: 53px;
-            bottom: 0;
-            left: 50%;
-            margin-left: -1px;
-        }
     </style>
 </head>
 
@@ -121,7 +93,7 @@
 
             document.querySelector("#single_img").src = theDish.billede.guid;
             document.querySelector("#beskrivelse").textContent = theDish.beskrivelse;
-            document.querySelector(".pris").textContent = theDish.pris;
+            document.querySelector(".pris").textContent = theDish.pris + " kr";
             document.querySelector(".previous").addEventListener("click", function() {
                 window.history.back();
             });
