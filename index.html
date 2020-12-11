@@ -5,214 +5,39 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>forside</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="style.css">
 
     <style>
-        * {
-            margin: 0 auto;
-            box-sizing: border-box;
-            font-family: 'Montserrat', sans-serif;
 
-        }
-
-
-        header {
-            padding: 20px;
-        }
-
-        nav {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-
-        }
-
-        .logobillede {
-            width: 130px;
-
-            margin: 15px 0px 0px 0px;
-            object-fit: cover;
-
-        }
-
-        a {
-            margin: 20px;
-            padding: 10px;
-            text-decoration: none;
-            font-size: 1rem;
-            color: #4a4a4a;
-        }
-
-
-
-        .closebtn {
-            display: none;
-        }
-
-        #brugermenu-none {
-            display: none;
-        }
-
-
-
-
-
-
-
-
-
-        @media screen and (max-width: 900px) {
-
-            /* The sidepanel menu */
-            .sidepanel {
-                height: 100%;
-                /* Specify a height */
-                width: 0;
-                /* 0 width - change this with JavaScript */
-                position: fixed;
-                /* Stay in place */
-                z-index: 1;
-                /* Stay on top */
-                top: 0;
-                left: 0;
-                background-color: #111;
-                /* Black*/
-                overflow-x: hidden;
-                /* Disable horizontal scroll */
-                padding-top: 60px;
-                /* Place content 60px from the top */
-                transition: 0.5s;
-                /* 0.5 second transition effect to slide in the sidepanel */
-            }
-
-            /* The sidepanel links */
-            .sidepanel a {
-                padding: 8px 8px 8px 32px;
-                text-decoration: none;
-                font-size: 25px;
-                color: #818181;
-                display: block;
-                transition: 0.3s;
-            }
-
-            /* When you mouse over the navigation links, change their color */
-            .sidepanel a:hover {
-                color: #f1f1f1;
-            }
-
-            /* Position and style the close button (top right corner) */
-            .sidepanel .closebtn {
-                position: absolute;
-                top: 0;
-                right: 25px;
-                font-size: 36px;
-                margin-left: 50px;
-            }
-
-            /* Style the button that is used to open the sidepanel */
-            .openbtn {
-                font-size: 20px;
-                cursor: pointer;
-                background-color: white;
-                color: #000000;
-                padding: 10px 15px;
-                border: none;
-            }
-
-            .openbtn:hover {
-                background-color: #444;
-            }
-
-            #brugermenu-none {
-                display: block;
-            }
-
-            nav {
-                display: inline-block;
-                flex-direction: row;
-                justify-content: center;
-
-            }
-
-            #logo-none {
-                display: none;
-            }
-
-
-        }
     </style>
 </head>
 
-<header>
-    <div id=color></div>
 
-
-
-
-
-
-    <!-- <nav class="topnav" id="myTopnav">
-        <a href="fremkaldelse.html">Fremkaldelse</a>
-        <a href="shop.html">Shop</a>
-        <a href="guide.html">Analogguiden</a>
-        <div class="dropdown">
-            <div class="dropbtn">
-                <i class="fa fa-caret-down"></i>
-            </div>
-
-            <div id="logo">
-                <a href="index.html">
-                    <img class="logobillede" alt="" src="imgs/logo2.svg">
-                </a>
-            </div>
-
-            <div class="dropdown-content">
-                <a href="dias.html">Diasscan</a>
-                <a href="hvem.html">hvem er vi</a>
-                <a href="st%C3%B8ttemuligheder.html">Støttemuligheder</a>
-                <a href="faciliteter.html">Faciliteter</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <div class="dropbtn">Om
-                <i class="fa fa-caret-down"></i>
-            </div>
-            <div class="dropdown-content">
-                <a href="personale.html">Personale</a>
-                <a href="Bestyrelse.html">Bestyrelse</a>
-                <a href="erhverv.html">Erhverv</a>
-                <a href="elevforening.html">Elevforening</a>
-            </div>
-        </div>
-        <a href="kontakt.html">Kontakt</a>
-        <a href="tilmelding.html" id="cta">Kurv</a>
-        <a href="javascript:void(0);" style="font-size:25px;" class="icon" onclick="myFunction()">&#9776;</a>
-    </nav>-->
-
-    <nav>
-        <div id="mySidepanel" class="sidepanel">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="fremkaldelse.html">Fremkaldelse</a>
-            <a href="shop.html">Shop</a>
-            <a href="guide.html">Analogguiden</a>
-            <a id="logo-none" href="index.html">
-                <img class="logobillede" alt="" src="imgs/logo2.svg">
-            </a>
-            <a href="dias.html">Diasscan</a>
-            <a href="hvem.html">hvem er vi</a>
-
-
-        </div>
-
-        <button id=brugermenu-none class="openbtn" onclick="openNav()">&#9776;</button>
-
-    </nav>
-
-
-
-</header>
 
 <body>
+
+    <header>
+
+        <nav>
+            <div id="mySidepanel" class="sidepanel">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="fremkaldelse.html">Fremkaldelse</a>
+                <a href="shop.html">Shop</a>
+                <a href="guide.html">Analogguiden</a>
+                <a id="logo-none" href="index.html">
+                    <img class="logobillede" alt="" src="imgs/logo2.svg">
+                </a>
+                <a href="dias.html">Diasscan</a>
+                <a href="hvem.html">hvem er vi</a>
+
+
+            </div>
+
+            <button id=brugermenu-none class="openbtn" onclick="openNav()">&#9776;</button>
+
+        </nav>
+
+    </header>
 
 
 
@@ -247,16 +72,6 @@
 
 
         }
-
-
-        /* Set the width of the sidebar to 250px (show it) */
-        function openNav() {
-            document.getElementById("mySidepanel").style.width = "100%";
-        }
-
-        /* Set the width of the sidebar to 0 (hide it) */
-        function closeNav() {
-            document.getElementById("mySidepanel").style.width = "0";
-        }
     </script>
+    <script src="script.js"></script>
 </body></html>

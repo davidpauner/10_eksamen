@@ -1,9 +1,10 @@
 /* BRUGER MENU */
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
+/* Set the width of the sidebar to 250px (show it) */
+function openNav() {
+    document.getElementById("mySidepanel").style.width = "100%";
+}
+
+/* Set the width of the sidebar to 0 (hide it) */
+function closeNav() {
+    document.getElementById("mySidepanel").style.width = "0";
 }
