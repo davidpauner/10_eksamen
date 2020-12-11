@@ -15,6 +15,7 @@ body {
 
 img {
     width: 100%;
+    height: auto;
 }
 
 /*** fonts ***/
@@ -30,8 +31,8 @@ h1 {
 
 h2 {
     color: #121212;
-    font-weight: 300;
-    font-size: 1.1rem;
+    font-weight: 500;
+    font-size: 1.2rem;
     letter-spacing: 0.09rem;
     text-transform: uppercase;
 
@@ -74,6 +75,8 @@ p {
     max-width: 250px;
 
 }
+
+
 
 
 /**** menu ***/
@@ -275,5 +278,117 @@ a {
         display: none;
     }
 
+
+}
+
+
+
+/****** sections *********/
+
+.section_2_columns {
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 70vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 2fr));
+    grid-gap: 130px;
+    padding-top: 60px;
+
+}
+
+.section_3_columns {
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 70vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 2fr));
+    grid-gap: 130px;
+    padding-top: 60px;
+
+}
+
+.analog_column {
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 80vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 3fr));
+    grid-gap: 40px;
+    padding-top: 60px;
+
+}
+
+/************ midterlinje  ***************/
+
+
+.midterlinje {
+    position: relative;
+}
+
+
+.midterlinje::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    background-color: black;
+    top: 53px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+/****** singleview-fremkaldelse *********/
+
+#linje {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    padding: 70px 0 0px 0;
+    width: 70vw;
+
+
+}
+
+
+
+.col-75 {
+    float: left;
+    width: 100%;
+    margin-top: 16px;
+}
+
+.col-25 {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    min-width: 300px;
+    padding: 22px 20px;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+
+    padding: 12px;
+    border: 1px solid #525252;
+    border-radius: 0px;
+    resize: vertical;
+}
+
+.tekst {
+    min-width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 
 }
