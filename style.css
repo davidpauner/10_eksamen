@@ -63,8 +63,16 @@ p {
 }
 
 
-.button_1 {
-    background: black;
+#button {
+    background: #242424;
+    color: #ffffff;
+    padding: 10px 70px 10px 70px;
+    font-weight: 300;
+    font-size: 0.8rem;
+    letter-spacing: 0.06rem;
+    text-transform: uppercase;
+    max-width: 250px;
+
 }
 
 
