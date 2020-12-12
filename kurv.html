@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        .tekst h3 {
+            margin: 0px 0 0px 0;
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <header>
+
+        <nav>
+            <div id="mySidepanel" class="sidepanel">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="fremkaldelse.html">Fremkaldelse</a>
+                <a href="shop.html">Shop</a>
+                <a href="guide.html">Analogguiden</a>
+                <a id="logo-none" href="index.html">
+                    <img class="logobillede" alt="" src="imgs/logo2.svg">
+                </a>
+                <a href="dias.html">Diasscan</a>
+                <a href="hvem.html">hvem er vi</a>
+
+
+            </div>
+
+            <button id=brugermenu-none class="openbtn" onclick="openNav()">&#9776;</button>
+
+        </nav>
+
+    </header>
+
+
+
+
+    <main>
+        <section id="filter-overskrift">
+            <div>
+                <h1>køb</h1>
+            </div>
+
+
+        </section>
+
+        <section class="section_2_columns">
+            <img id="single_img" src="imgs/dias.png" alt="">
+            <div class="tekst">
+                <h2></h2>
+                <h3>print</h3>
+                <div class="col-75">
+                    <select id="country" name="country">
+                        <option>vælg</option>
+                        <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                        <option value="usa">USA</option>
+                    </select>
+
+                </div>
+
+
+                <h3>Specialfilm</h3>
+                <div class="col-75">
+                    <select id="country" name="country">
+                        <option>vælg</option>
+                        <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                        <option value="usa">USA</option>
+                    </select>
+
+                </div>
+
+
+                <h3>scen kvalitet</h3>
+                <div class="col-75">
+                    <select id="country" name="country">
+                        <option>vælg</option>
+                        <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                        <option value="usa">USA</option>
+                    </select>
+
+                </div>
+                <h3>antal</h3>
+                <div class="col-25">
+                    <input type="text" id="antal" name="antal" placeholder="1">
+                </div>
+                <h3 class="pris"></h3>
+
+
+                <button id="button">Til kurv</button>
+            </div>
+
+
+        </section>
+
+        <div id="linje"></div>
+
+        <section class="section_2_columns">
+            <div class="tekst">
+                <p id="beskrivelse">Send din film med posten til vores fremkalderstudie, og vi sørger for at fremkalde samt scanne den digitalt i flot opløsning! Når vi har færdigbehandlet dine billeder, sender vi dem til dig direkte over mail.
+
+                    Læs mere om denne vare og hvordan du gør under sektionen: “Send din film”
+
+                    Leveringstid på almindelige film: max 72 timer på hverdage fra vi modtager din film
+
+                    Leveringstid på specialfilm: 4-15 hverdage fra vi modtager din film</p>
+            </div>
+
+            <div class="tekst">
+                <p id="beskrivelse">Scan kvaliteter:
+                    Large: 2692 × 1830 - Scan i høj opløsning. Kan printes i A4 størrelse.
+                    X-Large: 3637 × 2433 - Til enteusiasterne. Kan printes i A3 størrelse.
+                    XX-Large: 3649 × 5362 - Til de professionelle.
+                    Kan printes i plakatstørrelse.
+
+                    Printstørrelserne foroven er vejledende. Dette afhænger også af filmens skarphed og omstændighederne, som billedet blev taget under.
+
+                    Filformat: JPG</p>
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+
+
+
+
+
+
+
+    <script>
+        let urlParams = new URLSearchParams(window.location.search);
+        let id = urlParams.get("id")
+        let theDish;
+        document.addEventListener("DOMContentLoaded", getTheDish);
+        async function getTheDish() {
+
+            let url = "http://davidpauner.dk/kea/10_Eksamen/wordpress/wp-json/wp/v2/fremkaldelse/" + id;
+            id;
+            let jsonData = await fetch(url);
+            theDish = await jsonData.json();
+
+
+            document.querySelector("h2").textContent = theDish.title.rendered;
+            document.querySelector("h1").textContent = theDish.title.rendered;
+            document.querySelector("#single_img").src = theDish.billede.guid;
+            document.querySelector(".pris").textContent = theDish.pris;
+            document.querySelector("#beskrivelse").textContent = theDish.beskrivelse;
+            document.querySelector(".previous").addEventListener("click", function() {
+                window.history.back();
+            });
+
+        }
+
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
