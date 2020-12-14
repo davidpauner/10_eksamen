@@ -221,6 +221,7 @@ a {
     grid-template-columns: repeat(auto-fill, minmax(350px, 2fr));
     grid-gap: 130px;
     padding-top: 60px;
+    padding-bottom: 60px;
 
 }
 
@@ -236,20 +237,48 @@ a {
 }
 
 .analog_column {
-    max-width: 1200px;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 90vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 3fr));
+    grid-gap: 0px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+
+}
+
+.lab_column {
+    max-width: 1000px;
     margin: 0 auto;
     width: 80vw;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 3fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 3fr));
     grid-gap: 0px;
     padding-top: 60px;
+    padding-bottom: 60px;
+
+
+}
+
+.howto_column {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 90vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 3fr));
+    grid-gap: 0px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
 
 
 }
 
 .guide-grid {
     border: 1px solid black;
-    padding: 50px;
+    padding: 80px;
     margin-left: -1px;
 
 }
@@ -427,5 +456,19 @@ textarea {
         display: none;
     }
 
+
+}
+
+
+
+.img_size {
+    width: 50%;
+    margin-bottom: 20px;
+
+
+}
+
+.section_color {
+    background-color: #EBEDE5;
 
 }
