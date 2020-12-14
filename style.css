@@ -84,6 +84,8 @@ p {
 
 header {
     padding: 20px;
+
+
 }
 
 nav {
@@ -376,7 +378,11 @@ textarea {
         margin-left: -1px;
     }
 
+
 }
+
+
+
 
 
 @media screen and (max-width: 900px) {
@@ -454,6 +460,14 @@ textarea {
 
     #logo-none {
         display: none;
+    }
+
+    .open {
+        width: 100%;
+    }
+
+    .close {
+        width: 0px;
     }
 
 
