@@ -11,6 +11,45 @@
         .fag h3 {
             margin: 10px 0 10px 0;
         }
+
+        /*
+        @media screen and (min-width: 1200px) {
+
+            .midterlinje_shop {
+                position: relative;
+            }
+
+
+            .midterlinje_shop::after {
+                content: '';
+                position: absolute;
+                width: 1px;
+                background-color: black;
+                top: 113px;
+                bottom: 120px;
+                left: 33%;
+                margin-left: -1px;
+            }
+
+            .midterlinje_shop_2 {
+                position: relative;
+            }
+
+
+            .midterlinje_shop_2::after {
+                content: '';
+                position: absolute;
+                width: 1px;
+                background-color: black;
+                top: 113px;
+                bottom: 120px;
+                left: 66%;
+                margin-left: -1px;
+            }
+
+
+        }
+*/
     </style>
 
 </head>
@@ -99,45 +138,47 @@
         </nav>
     </section>
     <!--  fag  -->
-    <main class="fags fag_section"></main>
+    <main class="fags fag_section midterlinje_shop midterlinje_shop_2"></main>
     <section class="fags fag_section"></section>
 
-    <footer class="section_footer_columns">
-        <div>
-            <h3>kontakt</h3>
-            <p>Kontakt os</p>
-            <p>Info@cphlab.dk</p>
-
-        </div>
-
-        <div>
-            <h3>info</h3>
-            <p>Handelsbetingelser</p>
-            <p>Returnering og reklamationsret
-            </p>
-            <p>Persondatapolitik</p>
-            <p>Betalingsmetoder</p>
-            <p>FAQ</p>
-        </div>
-
-        <div>
-            <H3>Lad dig inspirere,<br>
-                kom på vores venneliste!</H3>
-
+    <footer>
+        <div class="section_footer_columns">
             <div>
-                <div class="col-mail">
-                    <input type="text" placeholder="Skriv din email">
-                </div>
+                <h3>kontakt</h3>
+                <p>Kontakt os</p>
+                <p>Info@cphlab.dk</p>
 
-                <button id="button">Tilmeld</button>
             </div>
 
-        </div>
+            <div>
+                <h3>info</h3>
+                <p>Handelsbetingelser</p>
+                <p>Returnering og reklamationsret
+                </p>
+                <p>Persondatapolitik</p>
+                <p>Betalingsmetoder</p>
+                <p>FAQ</p>
+            </div>
 
-        <div>
-            <a id="logo-none" href="index.html">
-                <img class="logobillede" alt="" src="imgs/logo2.svg">
-            </a>
+            <div>
+                <H3>Lad dig inspirere,<br>
+                    kom på vores venneliste!</H3>
+
+                <div>
+                    <div class="col-mail">
+                        <input type="text" placeholder="Skriv din email">
+                    </div>
+
+                    <button id="button">Tilmeld</button>
+                </div>
+
+            </div>
+
+            <div>
+                <a id="logo-none" href="index.html">
+                    <img class="logobillede" alt="" src="imgs/logo2.svg">
+                </a>
+            </div>
         </div>
     </footer>
 
