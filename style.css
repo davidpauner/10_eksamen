@@ -68,12 +68,12 @@ p {
 #button {
     background: #242424;
     color: #ffffff;
-    padding: 10px 70px 10px 70px;
+    padding: 15px 70px 15px 70px;
     font-weight: 300;
     font-size: 0.8rem;
     letter-spacing: 0.06rem;
     text-transform: uppercase;
-    max-width: 300px;
+    max-width: 350px;
     margin: 0;
     cursor: pointer;
 
@@ -115,7 +115,7 @@ nav {
     object-fit: cover;
 }
 
-a {
+nav a {
     margin: 30px;
     padding: 10px;
     padding-bottom: 40px;
@@ -362,9 +362,15 @@ figure {
 */
 
 .tekst_mid {
-    max-width: 450px;
+    max-width: 550px;
     margin: 0 auto;
     margin-top: 50px;
+}
+
+.tekst_film_forside {
+    max-width: 350px;
+    margin: 0 auto;
+    margin-top: 100px;
 }
 
 figcaption {
