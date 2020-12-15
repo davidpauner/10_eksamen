@@ -16,6 +16,7 @@ body {
 img {
     width: 100%;
     height: auto;
+    object-fit: cover;
 }
 
 /*** fonts ***/
@@ -264,9 +265,7 @@ a {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(650px, 2fr));
     grid-gap: 0px;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    margin-bottom: 60px;
+
 
 
 
@@ -310,12 +309,29 @@ a {
 
 }
 
+.section_5_columns {
+    max-width: 1800px;
+    margin: 0 auto;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 3fr));
+    grid-gap: 0px;
+    padding-bottom: 60px;
+    margin-bottom: 60px;
+}
+
 .tekst_forside {
     padding: 100px 150px 50px 150px;
+    margin-bottom: 5px;
 }
 
 #img_cover {
     object-fit: cover;
+}
+
+.img {
+    object-fit: cover;
+    width: 100%;
 }
 
 .guide-grid {
@@ -331,6 +347,22 @@ a {
 
 }
 
+/*
+figure {
+    margin: 0;
+    width: 100%
+}
+*/
+
+.tekst_mid {
+    max-width: 450px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+figcaption {
+    display: none;
+}
 
 
 
@@ -345,6 +377,7 @@ a {
 
 
 }
+
 
 
 
@@ -521,5 +554,17 @@ textarea {
 
 .section_color {
     background-color: #EBEDE5;
+
+}
+
+.section_splash {
+    width: 100vw;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+
+
 
 }
