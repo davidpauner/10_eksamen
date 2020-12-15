@@ -257,6 +257,21 @@ a {
 
 }
 
+.section_4_columns {
+    max-width: 1800px;
+    margin: 0 auto;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(650px, 2fr));
+    grid-gap: 0px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-bottom: 60px;
+
+
+
+}
+
 .lab_column {
     max-width: 1000px;
     margin: 0 auto;
@@ -293,6 +308,14 @@ a {
 
 
 
+}
+
+.tekst_forside {
+    padding: 100px 150px 50px 150px;
+}
+
+#img_cover {
+    object-fit: cover;
 }
 
 .guide-grid {
