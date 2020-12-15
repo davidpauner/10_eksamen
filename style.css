@@ -429,3 +429,38 @@ textarea {
 
 
 }
+
+
+
+/****** Forside *********/
+
+#splash {
+    background-image: url(imgs/DSC05701-3.jpg);
+    background-size: cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFF00;
+    text-transform: lowercase;
+}
+
+
+.saadan_column {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 3fr));
+    grid-gap: 0px;
+    padding-top: 60px;
+
+
+}
+
+.saadan-grid {
+    border: 1px solid black;
+    padding: 50px;
+    margin-left: -1px;
+
+}

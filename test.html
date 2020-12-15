@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+    </style>
+</head>
+
+
+
+<body>
+
+    <header>
+
+        <nav>
+            <div id="mitSidepanel" class="sidepanel">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="fremkaldelse.html">Fremkaldelse</a>
+                <a href="shop.html">Shop</a>
+                <a href="dias.html">Diasscan</a>
+                <a id="logo-none" href="index.html">
+                    <img class="logobillede" alt="" src="imgs/logo2.svg">
+                </a>
+                <a href="guide.html">Analogguiden</a>
+
+                <a href="hvem.html">hvem er vi</a>
+                <a href="kurv.html">
+                    <img class="kurv" alt="" src="imgs/kurv.svg">
+                </a>
+
+
+            </div>
+
+            <button id=brugermenu-none class="openbtn" onclick="openNav()">&#9776;</button>
+
+        </nav>
+
+    </header>
+
+
+
+    <main id="forside" class="indhold">
+
+
+
+    </main>
+
+
+    <button id="button">Black</button>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+        const listeElm = document.querySelector("#om");
+
+
+        const url = "http://davidpauner.dk/kea/10_Eksamen/wordpress/wp-json/wp/v2/pages/864"
+
+        /*"http://tlravn.dk/kea/09-tema/passion/wordpress/wp-json/wp/v2/pages/265"*/
+
+        async function start() {
+            const resspons = await fetch(url)
+            const json = await resspons.json();
+            vis(json);
+        }
+
+        function vis(album) {
+            console.log(album)
+
+
+            document.querySelector(".indhold").innerHTML = album.content.rendered;
+
+
+        }
+    </script>
+    <script src="script.js"></script>
+</body></html>
