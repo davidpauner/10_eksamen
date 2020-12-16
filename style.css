@@ -71,6 +71,10 @@ footer p {
     color: #3C3C3C;
 }
 
+footer .logobillede {
+    margin: 0px;
+}
+
 #button {
     background: #242424;
     color: #ffffff;
