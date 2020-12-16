@@ -139,7 +139,6 @@ nav a {
 }
 
 
-
 .closebtn {
     display: none;
 }
@@ -234,6 +233,13 @@ nav a {
 
 
 /****** sections *********/
+.section_1_column {
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 70vw;
+    padding-top: 60px;
+    margin-bottom: 60px;
+}
 
 .section_2_columns {
     max-width: 1000px;
