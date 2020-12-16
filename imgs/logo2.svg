@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="201.137" height="73.047" viewBox="0 0 201.137 73.047">
   <g id="Group_6" data-name="Group 6" transform="translate(-47 -43.866)">
-    <text id="CPH-LAB" transform="translate(145.088 102.861)" fill="#4a4a4a" font-size="53" font-family="CoolveticaRg-Regular, Coolvetica" letter-spacing="-0.006em"><tspan x="-97.944" y="0">CPH-LAB</tspan></text>
-    <text id="a_c41_studio" data-name="a c41 studio" transform="translate(154.34 60.866)" fill="#4a4a4a" font-size="18" font-family="CoolveticaRg-Regular, Coolvetica" letter-spacing="-0.006em"><tspan x="0" y="0">a c41 studio</tspan></text>
+    <text id="CPH-LAB" transform="translate(145.088 102.861)" fill="#000000" font-size="53" font-family="CoolveticaRg-Regular, Coolvetica" letter-spacing="-0.006em"><tspan x="-97.944" y="0">CPH-LAB</tspan></text>
+    <text id="a_c41_studio" data-name="a c41 studio" transform="translate(154.34 60.866)" fill="#000000" font-size="18" font-family="CoolveticaRg-Regular, Coolvetica" letter-spacing="-0.006em"><tspan x="0" y="0">a c41 studio</tspan></text>
     <path id="Path_4" data-name="Path 4" d="M0,0H201.137V4.41H0Z" transform="translate(47 108.093)" fill="#d9ca28"/>
     <path id="Path_3" data-name="Path 3" d="M0,0H201.137V4.41H0Z" transform="translate(47 112.503)" fill="#247b53"/>
   </g>
