@@ -90,7 +90,10 @@ p {
 
 header {
     padding: 20px;
-
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    z-index: 2;
 
 }
 
@@ -191,7 +194,6 @@ nav a {
 
 #filter-overskrift {
     display: flex;
-    margin: 50px 0 30px 0px;
     flex-direction: column;
 
 }
