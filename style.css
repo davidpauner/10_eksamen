@@ -19,6 +19,7 @@ img {
     object-fit: cover;
 }
 
+
 /*** fonts ***/
 
 h1 {
@@ -31,7 +32,7 @@ h1 {
 }
 
 h2 {
-    color: #121212;
+    color: #000000;
     font-weight: 600;
     font-size: 1.5rem;
     letter-spacing: 0.09rem;
@@ -40,7 +41,7 @@ h2 {
 }
 
 h3 {
-    color: #5a5a5a;
+    color: #000000;
     font-weight: 500;
     font-size: 1rem;
     letter-spacing: 0.04rem;
@@ -61,9 +62,13 @@ p {
     font-weight: 400;
     font-size: 1.rem;
     letter-spacing: 0.01rem;
-    line-height: 1.6rem
+    line-height: 1.6rem;
+    color: #000000;
 }
 
+footer p {
+    color: #3C3C3C;
+}
 
 #button {
     background: #242424;
@@ -113,7 +118,7 @@ nav {
 }
 
 .kurv {
-    width: 22px;
+    width: 25px;
     margin: 0px 0px -5px 0px;
     object-fit: cover;
 }
@@ -123,8 +128,9 @@ nav a {
     padding: 10px;
     padding-bottom: 40px;
     text-decoration: none;
+    text-transform: uppercase;
     font-size: 1rem;
-    color: #333333;
+    color: #000000;
 }
 
 
@@ -532,7 +538,7 @@ textarea {
         padding: 8px 8px 8px 32px;
         text-decoration: none;
         font-size: 25px;
-        color: #818181;
+        color: #ffffff;
         display: block;
         transition: 0.3s;
     }
