@@ -10,7 +10,14 @@
 
 body {
     color: #3c3c3c;
+
 }
+
+main {
+    max-width: 1800px;
+}
+
+
 
 img {
     width: 100%;
@@ -94,6 +101,7 @@ footer .logobillede {
     max-width: 350px;
     margin: 0;
     cursor: pointer;
+    text-align: center;
 
 }
 
@@ -162,6 +170,7 @@ nav a {
 #filter-menu {
     display: flex;
     margin: 50px 0 50px 0px;
+    justify-content: center;
 
 
 }
@@ -190,6 +199,19 @@ nav a {
 }
 
 .fag_section {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 70vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 40px;
+
+}
+
+
+
+/*
+.fag_section {
     max-width: 2100px;
     margin: 0 auto;
     display: grid;
@@ -199,6 +221,30 @@ nav a {
 
 
 }
+
+.fag_section-2 {
+    max-width: 2100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(25, 300px [col-start]);
+    grid-gap: 40px;
+    overflow: scroll;
+
+
+}
+
+.fag_section-3 {
+    max-width: 2100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(25, 300px [col-start]);
+    grid-gap: 40px;
+    overflow: scroll;
+
+
+}
+*/
+
 
 .valgt {
     background: black;
@@ -214,8 +260,9 @@ nav a {
 
 #filter-overskrift {
     display: flex;
-    flex-direction: column;
+
     padding: 50px;
+    justify-content: center;
 
 }
 
@@ -226,28 +273,6 @@ nav a {
 
 
 }
-
-/*
-    max-width: 2100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(25, 300px [col-start]);
-    grid-gap: 40px;
-    overflow: scroll;
-
-max-width: 1100px;
-    margin: 0 auto;
-    width: 70vw;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 40px;
-*/
-
-
-
-
-
-
 
 
 /****** sections *********/
@@ -302,7 +327,6 @@ max-width: 1100px;
 
 
 .section_4_columns {
-    max-width: 1800px;
     margin: 0 auto;
     width: 100vw;
     display: grid;
@@ -444,6 +468,15 @@ footer {
 
 
 /****** singleview-fremkaldelse *********/
+
+
+
+
+
+#linje-section {
+    display: flex;
+    justify-content: center;
+}
 
 #linje {
     display: flex;
@@ -642,6 +675,7 @@ textarea {
     align-items: center;
     text-align: center;
     background-size: cover;
+    justify-content: center;
 
 
 
