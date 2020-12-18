@@ -50,6 +50,7 @@
 
         }
 */
+
     </style>
 
 </head>
@@ -138,8 +139,15 @@
         </nav>
     </section>
     <!--  fag  -->
-    <main class="fags fag_section midterlinje_shop midterlinje_shop_2"></main>
-    <section class="fags fag_section"></section>
+    <main class="midterlinje_shop midterlinje_shop_2">
+        <section class="fags fag_section kodak"></section>
+        <section class="fags fag_section fuji"></section>
+        <section class="fags fag_section"></section>
+
+    </main>
+
+
+
 
     <footer>
         <div class="section_footer_columns">
@@ -269,8 +277,9 @@
         }
 
         function showPosts(theFilteredJson) {
-
             let dest = document.querySelector(".fags");
+            let kodak = document.querySelector(".kodak");
+            let fuji = document.querySelector(".fuji");
             let temp = document.querySelector("#fag_tmpl");
             dest.innerHTML = "";
 
@@ -286,7 +295,18 @@
                     dishClick(fag.id)
                 });
 
+
+
+                if (fag.filmbrand[0] == 7) {
+                    fuji.appendChild(klon);
+                }
+                if (fag.filmbrand[0] == 5) {
+                    kodak.appendChild(klon);
+                }
+
                 dest.appendChild(klon);
+
+
 
 
             });
@@ -296,6 +316,9 @@
             console.log("id", id)
             window.location.href = "singleview.html?id=" + id;
         }
+
     </script>
     <script src="script.js"></script>
-</body></html>
+</body>
+
+</html>
