@@ -345,9 +345,6 @@ nav a {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(450px, 3fr));
     grid-gap: 0px;
-    padding-bottom: 60px;
-    margin-bottom: 60px;
-
 }
 
 iframe {
@@ -668,6 +665,7 @@ textarea {
 .img_size {
     width: 50%;
     margin-bottom: 20px;
+    margin: 0 auto;
 
 
 }
