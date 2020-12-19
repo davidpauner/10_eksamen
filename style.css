@@ -150,13 +150,32 @@ nav {
 }
 
 nav a {
-    margin: 30px;
-    padding: 10px;
-    padding-bottom: 40px;
+    margin: 35px;
+    padding: 10px 0px 5px 0px;
+    /*    padding-bottom: 40px;*/
     text-decoration: none;
     text-transform: uppercase;
     font-size: 1rem;
     color: #000000;
+}
+
+.nav_valgt {
+    border-bottom: 2px solid black;
+}
+
+nav a:hover {
+    color: #a5a89b;
+
+}
+
+.link_a a {
+    color: #747962;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.04rem;
+    line-height: 2rem;
+
 }
 
 
@@ -207,6 +226,8 @@ nav a {
     grid-gap: 40px;
 
 }
+
+
 
 
 
@@ -371,6 +392,7 @@ nav a {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 3fr));
     grid-gap: 0px;
+    align-items: center;
 
 }
 
@@ -396,7 +418,8 @@ iframe {
 }
 
 .tekst_film_forside {
-    margin: 50px;
+    margin: 100px 0px 100px 150px;
+    max-width: 300px;
 }
 
 .tekst_film_forside #button {
@@ -409,7 +432,7 @@ figcaption {
 
 
 .tekst_forside {
-    padding: 100px 150px 50px 150px;
+
     margin-bottom: 5px;
 }
 
@@ -855,7 +878,7 @@ textarea {
         width: 70vw;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(350px, 2fr));
-        grid-gap: 130px;
+        grid-gap: 100px;
         padding-top: 60px;
         padding-bottom: 60px;
 
@@ -870,6 +893,11 @@ textarea {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         grid-gap: 50px;
         padding: 40px 0 60px 0;
+    }
+
+    .tekst h2 {
+        margin-top: 50px;
+        margin-bottom: 25px;
     }
 
 

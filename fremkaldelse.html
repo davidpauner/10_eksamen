@@ -11,7 +11,6 @@
         h1 {
             padding: 130px 0 30px 0;
         }
-
     </style>
 </head>
 
@@ -24,7 +23,7 @@
         <nav>
             <div id="mitSidepanel" class="sidepanel">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="fremkaldelse.html">Fremkaldelse</a>
+                <a href="fremkaldelse.html" class="nav_valgt">Fremkaldelse</a>
                 <a href="shop.html">Shop</a>
                 <a href="dias.html">Diasscan</a>
                 <a id="logo-none" href="index.html">
@@ -77,7 +76,7 @@
 
 
     <!--   Filter  navigation -->
-    <section id="filter-overskrift">
+    <section id="filter-overskrift" class="link_a">
         <div>
             <h1>Fremkaldelse</h1>
             <a href="saadanvirkerdet.html">Hvordan virker det?</a>
@@ -248,9 +247,6 @@
             console.log("id", id)
             window.location.href = "singleview-fremkaldelse.html?id=" + id;
         }
-
     </script>
     <script src="script.js"></script>
-</body>
-
-</html>
+</body></html>
