@@ -4,7 +4,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif;
 
 }
 
@@ -76,12 +76,14 @@ h4 {
 
 p {
     font-family: 'EB Garamond', serif;
-    font-weight: 100;
+    font-weight: 400;
     font-size: 1.1rem;
     letter-spacing: 0.1rem;
     line-height: 1.8rem;
     color: #3b3b3b;
 }
+
+
 
 footer p {
     color: #3C3C3C;
