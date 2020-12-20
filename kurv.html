@@ -10,104 +10,144 @@
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         h3 {
-            margin: 0px 0 0px 0;
+            margin: 15px 0 20px 0;
         }
+
 
         .section_kurv_columns {
             max-width: 1000px;
             margin: 0 auto;
-            width: 70vw;
+            width: 90vw;
             display: grid;
-            grid-template-columns: auto 150px;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
             grid-gap: 50px;
             padding-top: 60px;
-
-        }
-
-        .section_kurv_pris_columns {
-            max-width: 1000px;
-            margin: 0 auto;
-            width: 70vw;
-            display: grid;
-            grid-template-columns: auto 150px;
-            grid-gap: 50px;
-            padding-top: 60px;
-
+            margin-bottom: 70px
         }
 
 
         .minevare {
-            max-width: 1000px;
-            margin: 0 auto;
-            width: 100%;
+            max-width: 700px;
             display: grid;
-            grid-template-columns: 150px auto;
-            grid-template-rows: fr2;
-            grid-gap: 50px;
-            padding-top: 0px;
-
-
-
+            grid-template-columns: repeat(auto-fill, minmax(180px, 3fr));
+            grid-gap: 0px;
+            margin-bottom: 40px
         }
-
-
-
-        .minevare {}
 
         .space-b {
             display: flex;
             flex-direction: row;
-            flex-wrap: nowrap;
+            flex-wrap: wrap;
             justify-content: space-between;
             margin: 0;
+            grid-column: span 1;
+        }
+
+        @media screen and (min-width: 600px) {
+            .space-b {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin: 0;
+                grid-column: span 2;
+            }
+
+            .section_kurv_columns {
+                max-width: 1000px;
+                margin: 0 auto;
+                width: 80vw;
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(400px, 2fr));
+                grid-gap: 50px;
+                padding-top: 60px;
+                margin-bottom: 70px
+            }
+
+        }
+
+
+        @media screen and (min-width: 1200px) {
+            .section_kurv_columns {
+                max-width: 1000px;
+                margin: 0 auto;
+                width: 80vw;
+                display: grid;
+                grid-template-columns: auto 250px;
+                grid-gap: 50px;
+                padding-top: 60px;
+                margin-bottom: 70px
+            }
+
+            .space-b {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin: 0;
+                grid-column: span 2;
+            }
+
+            .minevare {
+                max-width: 800px;
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(210px, 3fr));
+                grid-gap: 0px;
+                margin-bottom: 40px
+            }
+        }
+
+
+        .kurvtekst {
+
+            margin: 0;
+            text-align: left;
 
 
         }
 
-        /*
+        .section_kurv_columns h2 {
+            margin-top: 0px;
+            margin-bottom: 10px;
+        }
+
+        .kurvtekst h2 {
+            margin-top: 0px;
+            margin-bottom: 10px;
+        }
+
+        .kurvtekst h3 {
+            margin: 25px 0 25px 0;
+        }
+
+        .minevare img {
+            width: 70%
+        }
+
+        #linje-kurv {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid black;
+            margin: 0px 0 20px 0;
+            width: 100%;
+        }
+
         .Kurvpris_container {
             display: flex;
             flex-direction: row;
-            flex-wrap: nowrap;
-         justify-content: space-between;
-            margin: 0;
-
-        }
-*/
-
-
-        /*
-        .item-a {
-            grid-area: header;
+            justify-content: space-between;
         }
 
-        .item-b {
-            grid-area: main;
-            background-color: aqua;
+        select {
+            display: block;
         }
 
-        .item-c {
-            grid-area: sidebar;
-            background-color: #ff6200;
+        #col-75 {
+            width: 100%;
+            margin: 5px 0 25px 0;
+            display: flex;
+            flex-direction: column;
         }
-
-        .item-d {
-            grid-area: footer;
-        }
-
-        .container {
-            display: grid;
-            width: 70vw;
-
-            grid-template-columns: 50px 50px 50px 50px;
-            grid-template-rows: auto;
-            grid-template-areas:
-                "header header header header"
-                "main main . sidebar"
-                "footer footer footer footer";
-        }
-*/
-
     </style>
 </head>
 
@@ -153,51 +193,71 @@
     <main>
         <section id="filter-overskrift">
             <div>
-                <h1>køb</h1>
+                <h1>kurv</h1>
             </div>
 
 
         </section>
 
-        <!--
-        <section class="container">
-            <div class="item-a"></div>
-            <div class="item-b"></div>
-            <div class="item-b"></div>
-            <div class="item-d"></div>
-        </section>
--->
 
 
 
         <section class="section_kurv_columns">
+            <div>
+                <h2>Mine varer</h2>
+                <section id="linje-section">
+                    <div id="linje-kurv"></div>
+                </section>
+                <div class="minevare">
 
-            <div class="minevare">
+                    <img id="single_img" src="imgs/til-kurv.png" alt="">
 
-                <img id="single_img" src="imgs/dias.png" alt="">
+                    <div class="space-b">
+                        <div>
+                            <h3>Fremkaldelse + Digitale Billeder</h3>
+                            <h6>Print: Ingen print</h6>
+                            <h6>specialfilm: sort/hvid</h6>
+                            <h6>Scan kvalitet: X-large +29kr</h6>
+                        </div>
+                        <div>
+                            <h3>128 kr</h3>
+                        </div>
 
-                <div class="space-b">
-                    <h3>Fremkaldelse + Digitale Billeder</h3>
-                    <h3>128 kr</h3>
+                    </div>
+
                 </div>
-                <img id="single_img" src="imgs/dias.png" alt="">
+                <section id="linje-section">
+                    <div id="linje-kurv"></div>
+                </section>
+                <div class="minevare">
 
-                <div class="space-b">
-                    <h3>Fremkaldelse + Digitale Billeder</h3>
-                    <h3>128 kr</h3>
+                    <img id="single_img" src="imgs/til-kurv-FILM.png" alt="">
+
+                    <div class="space-b">
+                        <div>
+                            <h3>Fuji Superia X-TRA 400</h3>
+                            <h6>Print: Ingen print</h6>
+                            <h6>specialfilm: sort/hvid</h6>
+                            <h6>Scan kvalitet: X-large +29kr</h6>
+                        </div>
+                        <div>
+                            <h3>128 kr</h3>
+                        </div>
+
+                    </div>
+
+
                 </div>
-
-
-
-
-
-
             </div>
 
 
 
-            <div class="tekst">
+
+            <div class="kurvtekst">
                 <h2>Oversigt</h2>
+                <section id="linje-section">
+                    <div id="linje-kurv"></div>
+                </section>
 
                 <div class="Kurvpris_container">
                     <h3>Subtotal</h3>
@@ -207,8 +267,11 @@
 
 
 
-                <h3>levering</h3>
-                <div class="col-75">
+                <div class="Kurvpris_container">
+                    <h3>levering</h3>
+                    <h3>25 kr</h3>
+                </div>
+                <div id="col-75">
                     <select id="country" name="country">
                         <option>GLS levering</option>
                         <option value="australia">Australia</option>
@@ -217,6 +280,8 @@
                     </select>
 
                 </div>
+
+
                 <div class="Kurvpris_container">
                     <h3>Total pris</h3>
 
@@ -225,39 +290,15 @@
 
 
 
-                <button id="button">Køb nu</button>
+
+
+                <button id="button">Betaling</button>
             </div>
 
 
         </section>
 
-        <div id="linje"></div>
 
-        <section class="section_2_columns">
-            <div class="tekst">
-                <p id="beskrivelse">Send din film med posten til vores fremkalderstudie, og vi sørger for at fremkalde samt scanne den digitalt i flot opløsning! Når vi har færdigbehandlet dine billeder, sender vi dem til dig direkte over mail.
-
-                    Læs mere om denne vare og hvordan du gør under sektionen: “Send din film”
-
-                    Leveringstid på almindelige film: max 72 timer på hverdage fra vi modtager din film
-
-                    Leveringstid på specialfilm: 4-15 hverdage fra vi modtager din film</p>
-            </div>
-
-            <div class="tekst">
-                <p id="beskrivelse">Scan kvaliteter:
-                    Large: 2692 × 1830 - Scan i høj opløsning. Kan printes i A4 størrelse.
-                    X-Large: 3637 × 2433 - Til enteusiasterne. Kan printes i A3 størrelse.
-                    XX-Large: 3649 × 5362 - Til de professionelle.
-                    Kan printes i plakatstørrelse.
-
-                    Printstørrelserne foroven er vejledende. Dette afhænger også af filmens skarphed og omstændighederne, som billedet blev taget under.
-
-                    Filformat: JPG</p>
-            </div>
-
-
-        </section>
 
 
     </main>
@@ -334,9 +375,6 @@
             });
 
         }
-
     </script>
     <script src="script.js"></script>
-</body>
-
-</html>
+</body></html>
