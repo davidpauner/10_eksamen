@@ -137,7 +137,7 @@ nav {
 
 .logobillede {
     width: 100px;
-    margin: 10px 0px 22px 0px;
+    margin: 0px 0px 0px 0px;
     object-fit: cover;
     vertical-align: middle;
 
@@ -145,7 +145,7 @@ nav {
 
 .kurv {
     width: 25px;
-    margin: 0px 0px -5px 0px;
+    margin: 5px 15px 0px 0px;
     object-fit: cover;
 }
 
@@ -646,9 +646,9 @@ textarea {
     }
 
     nav {
-        display: inline-block;
+        display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
 
     }
 
@@ -665,7 +665,8 @@ textarea {
     }
 
     #nav-none {
-        display: inline;
+        display: block;
+        margin: 0px;
     }
 
 
@@ -922,6 +923,14 @@ textarea {
         object-fit: cover;
         vertical-align: middle;
 
+    }
+
+
+
+    .kurv {
+        width: 25px;
+        margin: 0px 0px -5px 0px;
+        object-fit: cover;
     }
 
 
