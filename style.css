@@ -136,7 +136,7 @@ nav {
 }
 
 .logobillede {
-    width: 130px;
+    width: 100px;
     margin: 10px 0px 22px 0px;
     object-fit: cover;
     vertical-align: middle;
@@ -175,7 +175,6 @@ nav a:hover {
     font-size: 1rem;
     letter-spacing: 0.04rem;
     line-height: 2rem;
-
 }
 
 
@@ -186,6 +185,12 @@ nav a:hover {
 #brugermenu-none {
     display: none;
 }
+
+#nav-none {
+    display: none;
+}
+
+
 
 /**** shop ***/
 
@@ -418,8 +423,8 @@ iframe {
 }
 
 .tekst_film_forside {
-    margin: 100px 0px 100px 150px;
-    max-width: 300px;
+    margin: 50px;
+
 }
 
 .tekst_film_forside #button {
@@ -637,7 +642,7 @@ textarea {
     }
 
     #brugermenu-none {
-        display: block;
+        display: inline-block;
     }
 
     nav {
@@ -658,6 +663,12 @@ textarea {
     .close {
         width: 0px;
     }
+
+    #nav-none {
+        display: inline;
+    }
+
+
 
 
 }
@@ -807,7 +818,10 @@ textarea {
         margin-bottom: 25px;
     }
 
-
+    .tekst_film_forside {
+        margin: 100px 0px 100px 150px;
+        max-width: 300px;
+    }
 
 
 
@@ -898,6 +912,16 @@ textarea {
     .tekst h2 {
         margin-top: 50px;
         margin-bottom: 25px;
+    }
+
+
+
+    .logobillede {
+        width: 130px;
+        margin: 10px 0px 22px 0px;
+        object-fit: cover;
+        vertical-align: middle;
+
     }
 
 
