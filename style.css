@@ -588,7 +588,7 @@ textarea {
 
 /****** Burger menu i mobil *********/
 
-@media screen and (max-width: 1130px) {
+@media screen and (max-width: 1200px) {
 
     .sidepanel {
         height: 100%;
