@@ -61,26 +61,23 @@
         </nav>
     </header>
 
-
-
     <!-- Filter TEMPLATES  -->
     <template id="filter_btns_tmpl">
         <h3>Huop</h3>
     </template>
-    <!-- template fag-->
-    <template id="course_header_tmpl">
-        <h1>Huop</h1>
-        <section class="fag_section"></section>
-    </template>
-    <!-- template fag-->
-    <template id="fag_tmpl">
-        <section class="fag">
+
+
+
+    <!-- template produkter-->
+    <template id="film_tmpl">
+        <section class="film">
             <img src="" alt="">
-            <div class="fag_container">
+            <div class="film_container">
                 <h2></h2>
                 <h3 class="pris"></h3>
                 <button id="button">Køb</button>
             </div>
+
         </section>
     </template>
 
@@ -88,31 +85,31 @@
 
 
 
-    <!--SITE MENU-->
 
-
-
+    <section id="filter-overskrift">
+        <div>
+            <h1>Shop</h1>
+        </div>
+    </section>
 
 
     <!--   Filter  navigation -->
-    <section id="filter-overskrift" class="link_a">
-        <div>
-            <h1>Fremkaldelse</h1>
-            <a href="saadanvirkerdet.html">Hvordan virker det?</a>
-        </div>
-
-
-    </section>
     <section id="filter-menu">
-
-
         <nav class="filter_nav">
-
             <h3></h3>
         </nav>
     </section>
-    <!--  fag  -->
-    <main class="fags fag_section"></main>
+
+
+
+
+    <!--  produkter  -->
+    <main class="films film_section midterlinje_shop">
+
+    </main>
+
+
+
 
     <footer>
         <div class="section_footer_columns">
@@ -156,13 +153,13 @@
     </footer>
 
 
+
     <script>
         "use strict"
 
 
         let theCategories;
-
-        let theFag;
+        let theProducts;
 
         document.addEventListener("DOMContentLoaded", start);
 
@@ -171,30 +168,38 @@
             getTheCategories();
         }
 
+        // JSON-daten bliver hentet ind fra Wordpress-backend, her hentes analogshoppens kategorier, der bruges til menupunkter
+
         async function getTheCategories() {
             let url = "http://davidpauner.dk/kea/10_Eksamen/wordpress/wp-json/wp/v2/fremkaldelsegrupper";
+
             let jsonData = await fetch(url);
             theCategories = await jsonData.json();
             generateCategoryBTNs();
 
-            getTheFag();
+            getTheProducts();
 
         }
 
 
-        async function getTheFag() {
+        // JSON-daten bliver hentet ind fra Wordpress-backend, her hentes analogshoppens produkter
+
+
+        async function getTheProducts() {
 
 
             let url = "http://davidpauner.dk/kea/10_Eksamen/wordpress/wp-json/wp/v2/fremkaldelse?per_page=100";
 
             let jsonData = await fetch(url);
-            theFag = await jsonData.json();
+            theProducts = await jsonData.json();
             console.log("LOADING DONE");
 
 
             document.querySelector(".filter_nav h3").click();
         }
 
+
+        // Her klones den relevante json-data til deres respektive html-templates
 
         function generateCategoryBTNs() {
 
@@ -229,42 +234,54 @@
 
         }
 
+        // Her filtreres de enkelte produktkategorier efter deres custom-taxonomies fra Wordpress
+
         function filterContent(theFilter) {
             let filtrerede;
             if (theFilter == "alle") {
-                filtrerede = theFag;
+                filtrerede = theProducts;
             } else {
-                filtrerede = theFag.filter(fag => fag.fremkaldelsegrupper[0] == theFilter);
+                filtrerede = theProducts.filter(film => film.fremkaldelsegrupper[0] == theFilter);
             }
             console.log(filtrerede);
             showPosts(filtrerede);
         }
 
         function showPosts(theFilteredJson) {
-
-            let dest = document.querySelector(".fags");
-            let temp = document.querySelector("#fag_tmpl");
+            let dest = document.querySelector(".films");
+            /*let kodak = document.querySelector(".kodak");
+            let fuji = document.querySelector(".fuji");*/
+            let temp = document.querySelector("#film_tmpl");
             dest.innerHTML = "";
 
-            theFilteredJson.forEach(fag => {
+            theFilteredJson.forEach(film => {
 
                 let klon = temp.cloneNode(true).content;
-                klon.querySelector("h2").textContent = fag.title.rendered;
-                klon.querySelector("img").src = fag.billede.guid;
-                klon.querySelector(".pris").textContent = fag.pris + " kr";
-                klon.querySelector(".fag").addEventListener("click", function() {
-                    dishClick(fag.id)
+                klon.querySelector("h2").textContent = film.title.rendered;
+                klon.querySelector("img").src = film.billede.guid;
+                klon.querySelector(".pris").textContent = film.pris + " kr";
+
+
+                klon.querySelector(".film").addEventListener("click", function() {
+                    productClick(film.id)
                 });
 
+
+
                 dest.appendChild(klon);
+
+
 
 
             });
         }
 
-        function dishClick(id) {
+        // Det enkelte produkts ID bliver hentet og singleview vises
+
+        function productClick(id) {
             console.log("id", id)
-            window.location.href = "singleview-fremkaldelse.html?id=" + id;
+            window.location.href = "singleview-fremkaldelse.html?id=" +
+                id;
         }
     </script>
     <script src="script.js"></script>
