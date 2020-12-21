@@ -980,5 +980,11 @@ textarea {
         object-fit: cover;
     }
 
+    .tekst_film_forside {
+        margin: 0px 0px 0px 150px;
+        max-width: 300px;
+    }
+
+
 
 }
