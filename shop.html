@@ -210,6 +210,8 @@
             getTheCategories();
         }
 
+        // JSON-daten bliver hentet ind fra Wordpress-backend, her hentes analogshoppens kategorier, der bruges til menupunkter
+
         async function getTheCategories() {
             let url = "http://davidpauner.dk/kea/10_Eksamen/wordpress/wp-json/wp/v2/analogshopgruppe";
             let jsonData = await fetch(url);
@@ -219,6 +221,9 @@
             getTheFag();
 
         }
+
+
+        // JSON-daten bliver hentet ind fra Wordpress-backend, her hentes analogshoppens produkter
 
 
         async function getTheFag() {
@@ -234,6 +239,8 @@
             document.querySelector(".filter_nav h3").click();
         }
 
+
+        // Her klones den relevante json-data til deres respektive html-templates
 
         function generateCategoryBTNs() {
 
@@ -268,6 +275,8 @@
 
         }
 
+        // Her filtreres de enkelte produktkategorier efter deres custom-taxonomies fra Wordpress
+
         function filterContent(theFilter) {
             let filtrerede;
             if (theFilter == "alle") {
@@ -281,8 +290,8 @@
 
         function showPosts(theFilteredJson) {
             let dest = document.querySelector(".fags");
-            let kodak = document.querySelector(".kodak");
-            let fuji = document.querySelector(".fuji");
+            /*let kodak = document.querySelector(".kodak");
+            let fuji = document.querySelector(".fuji");*/
             let temp = document.querySelector("#fag_tmpl");
             dest.innerHTML = "";
 
@@ -307,6 +316,8 @@
 
             });
         }
+
+        // Det enkelte produkts ID bliver hentet og singleview vises
 
         function dishClick(id) {
             console.log("id", id)
