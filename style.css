@@ -205,6 +205,11 @@ nav a:hover {
     display: none;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
 
 
 /**** shop ***/
