@@ -829,7 +829,7 @@ textarea {
     }
 
     .tekst_film_forside {
-        margin: 0px 0px 0px 0px;
+        margin: 100px 0px 100px 150px;
         max-width: 300px;
     }
 
@@ -941,6 +941,12 @@ textarea {
         margin: 0px 0px -5px 0px;
         object-fit: cover;
     }
+
+    .tekst_film_forside {
+        margin: 0px 0px 0px 150px;
+        max-width: 300px;
+    }
+
 
 
 }
