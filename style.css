@@ -201,7 +201,7 @@ nav a:hover {
     display: none;
 }
 
-#nav-none {
+.nav-none {
     display: none;
 }
 
@@ -682,6 +682,10 @@ textarea {
         display: none;
     }
 
+    #logo-none-footer {
+        display: none;
+    }
+
     .open {
         width: 100%;
     }
@@ -690,7 +694,7 @@ textarea {
         width: 0px;
     }
 
-    #nav-none {
+    .nav-none {
         display: block;
         margin: 0px;
     }
