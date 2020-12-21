@@ -188,12 +188,12 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", start);
-        const listeElm = document.querySelector("#om");
+
 
 
         const url = "http://davidpauner.dk/kea/10_Eksamen/wordpress/wp-json/wp/v2/pages/123"
 
-        /*"http://tlravn.dk/kea/09-tema/passion/wordpress/wp-json/wp/v2/pages/265"*/
+
 
         async function start() {
             const resspons = await fetch(url)
@@ -201,11 +201,10 @@
             vis(json);
         }
 
-        function vis(album) {
-            console.log(album)
+        function vis(indhold) {
 
 
-            document.querySelector(".indhold").innerHTML = album.content.rendered;
+            document.querySelector(".indhold").innerHTML = indhold.content.rendered;
 
 
         }

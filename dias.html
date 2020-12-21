@@ -116,7 +116,9 @@
                 <h3 class="pris"></h3>
 
 
-                <button id="button">Til kurv</button>
+                <a href="kurv.html">
+                    <button id="button">Til kurv</button>
+                </a>
             </div>
 
 
@@ -217,28 +219,7 @@
 
 
     <script>
-        let urlParams = new URLSearchParams(window.location.search);
-        let id = urlParams.get("id")
-        let theDish;
-        document.addEventListener("DOMContentLoaded", getTheDish);
-        async function getTheDish() {
 
-            let url = "http://davidpauner.dk/kea/10_Eksamen/wordpress/wp-json/wp/v2/fremkaldelse/" + id;
-            id;
-            let jsonData = await fetch(url);
-            theDish = await jsonData.json();
-
-
-            document.querySelector("h2").textContent = theDish.title.rendered;
-            document.querySelector("h1").textContent = theDish.title.rendered;
-            document.querySelector("#single_img").src = theDish.billede.guid;
-            document.querySelector(".pris").textContent = theDish.pris;
-            document.querySelector("#beskrivelse").textContent = theDish.beskrivelse;
-            document.querySelector(".previous").addEventListener("click", function() {
-                window.history.back();
-            });
-
-        }
     </script>
     <script src="script.js"></script>
 </body></html>
