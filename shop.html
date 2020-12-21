@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        .fag h3 {
+        .film h3 {
             margin: 10px 0 10px 0;
         }
 
@@ -98,19 +98,11 @@
 
 
 
-    <!-- template fag-->
-    <template id="course_header_tmpl">
-        <h1>Huop</h1>
-        <section class="fag_section"></section>
-    </template>
-
-
-
-    <!-- template fag-->
-    <template id="fag_tmpl">
-        <section class="fag">
+    <!-- template produkter-->
+    <template id="film_tmpl">
+        <section class="film">
             <img src="" alt="">
-            <div class="fag_container">
+            <div class="film_container">
                 <h2></h2>
                 <h3 class="pris"></h3>
                 <button id="button">Køb</button>
@@ -123,29 +115,26 @@
 
 
 
-    <!--SITE MENU-->
 
-
-
-
-
-    <!--   Filter  navigation -->
     <section id="filter-overskrift">
         <div>
             <h1>Shop</h1>
         </div>
-
-
     </section>
+
+
+    <!--   Filter  navigation -->
     <section id="filter-menu">
-
-
         <nav class="filter_nav">
             <h3></h3>
         </nav>
     </section>
-    <!--  fag  -->
-    <main class="fags fag_section midterlinje_shop midterlinje_shop_2">
+
+
+
+
+    <!--  produkter  -->
+    <main class="films film_section midterlinje_shop">
 
     </main>
 
@@ -200,8 +189,7 @@
 
 
         let theCategories;
-
-        let theFag;
+        let theProducts;
 
         document.addEventListener("DOMContentLoaded", start);
 
@@ -214,11 +202,12 @@
 
         async function getTheCategories() {
             let url = "http://davidpauner.dk/kea/10_Eksamen/wordpress/wp-json/wp/v2/analogshopgruppe";
+
             let jsonData = await fetch(url);
             theCategories = await jsonData.json();
             generateCategoryBTNs();
 
-            getTheFag();
+            getTheProducts();
 
         }
 
@@ -226,13 +215,13 @@
         // JSON-daten bliver hentet ind fra Wordpress-backend, her hentes analogshoppens produkter
 
 
-        async function getTheFag() {
+        async function getTheProducts() {
 
 
             let url = "http://davidpauner.dk/kea/10_Eksamen/wordpress/wp-json/wp/v2/film?per_page=100";
 
             let jsonData = await fetch(url);
-            theFag = await jsonData.json();
+            theProducts = await jsonData.json();
             console.log("LOADING DONE");
 
 
@@ -280,31 +269,31 @@
         function filterContent(theFilter) {
             let filtrerede;
             if (theFilter == "alle") {
-                filtrerede = theFag;
+                filtrerede = theProducts;
             } else {
-                filtrerede = theFag.filter(fag => fag.analogshopgruppe[0] == theFilter);
+                filtrerede = theProducts.filter(film => film.analogshopgruppe[0] == theFilter);
             }
             console.log(filtrerede);
             showPosts(filtrerede);
         }
 
         function showPosts(theFilteredJson) {
-            let dest = document.querySelector(".fags");
+            let dest = document.querySelector(".films");
             /*let kodak = document.querySelector(".kodak");
             let fuji = document.querySelector(".fuji");*/
-            let temp = document.querySelector("#fag_tmpl");
+            let temp = document.querySelector("#film_tmpl");
             dest.innerHTML = "";
 
-            theFilteredJson.forEach(fag => {
+            theFilteredJson.forEach(film => {
 
                 let klon = temp.cloneNode(true).content;
-                klon.querySelector("h2").textContent = fag.title.rendered;
-                klon.querySelector("img").src = fag.billede.guid;
-                klon.querySelector(".pris").textContent = fag.pris + " kr";
+                klon.querySelector("h2").textContent = film.title.rendered;
+                klon.querySelector("img").src = film.billede.guid;
+                klon.querySelector(".pris").textContent = film.pris + " kr";
 
 
-                klon.querySelector(".fag").addEventListener("click", function() {
-                    dishClick(fag.id)
+                klon.querySelector(".film").addEventListener("click", function() {
+                    productClick(film.id)
                 });
 
 
@@ -319,7 +308,7 @@
 
         // Det enkelte produkts ID bliver hentet og singleview vises
 
-        function dishClick(id) {
+        function productClick(id) {
             console.log("id", id)
             window.location.href = "singleview.html?id=" + id;
         }
