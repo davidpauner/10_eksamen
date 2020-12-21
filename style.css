@@ -89,18 +89,21 @@ p {
     font-size: 1.1rem;
     letter-spacing: 0.1rem;
     line-height: 1.8rem;
-    color: #3b3b3b;
+    color: #000000;
 }
 
 
 
 footer p {
-    color: #3C3C3C;
+    color: #000000;
 }
 
 footer .logobillede {
     margin: 0px;
 }
+
+
+
 
 #button {
     background: #242424;
@@ -489,6 +492,8 @@ footer {
     background-color: #EBEDE5;
 }
 
+
+
 .section_footer_columns {
     max-width: 1400px;
     margin: 0 auto;
@@ -516,6 +521,39 @@ footer {
     margin: 5px 0 25px 0;
 
 }
+
+
+
+/**** SoMe footer ***/
+
+#some_container {
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.some-face {
+    background-image: url(imgs/facebook.svg);
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.some-insta {
+    background-image: url(imgs/instagram.svg);
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+
+
 
 
 /****** singleview-fremkaldelse *********/
@@ -559,7 +597,7 @@ select,
 textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #525252;
+    border: 1px solid #000000;
     resize: vertical;
     margin: 0;
     float: left;
