@@ -251,40 +251,7 @@ nav a:hover {
 
 
 
-/*
-.fag_section {
-    max-width: 2100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(25, 300px [col-start]);
-    grid-gap: 40px;
-    overflow: scroll;
 
-
-}
-
-.fag_section-2 {
-    max-width: 2100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(25, 300px [col-start]);
-    grid-gap: 40px;
-    overflow: scroll;
-
-
-}
-
-.fag_section-3 {
-    max-width: 2100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(25, 300px [col-start]);
-    grid-gap: 40px;
-    overflow: scroll;
-
-
-}
-*/
 
 
 .valgt {
