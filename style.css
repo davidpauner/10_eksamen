@@ -332,7 +332,7 @@ a {
     margin: 0 auto;
     width: 90vw;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 3fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 3fr));
     grid-gap: 0px;
     padding-top: 0px;
     padding-bottom: 60px;
@@ -444,7 +444,7 @@ figcaption {
 
 .guide-grid {
     border: 1px solid black;
-    padding: 60px 80px 30px 80px;
+    padding: 60px 20px 30px 20px;
     margin-left: -1px;
 
 }
@@ -708,28 +708,7 @@ textarea {
 /********************* ipad *******************************/
 
 
-/************ midterlinje  ***************/
 
-@media screen and (min-width: 1200px) {
-
-    .midterlinje {
-        position: relative;
-    }
-
-
-    .midterlinje::after {
-        content: '';
-        position: absolute;
-        width: 1px;
-        background-color: black;
-        top: 113px;
-        bottom: 120px;
-        left: 50%;
-        margin-left: -1px;
-    }
-
-
-}
 
 @media screen and (min-width: 600px) {
 
@@ -855,8 +834,12 @@ textarea {
         max-width: 300px;
     }
 
+    .guide-grid {
+        border: 1px solid black;
+        padding: 60px 80px 30px 80px;
+        margin-left: -1px;
 
-
+    }
 
 
 
@@ -969,6 +952,29 @@ textarea {
         max-width: 300px;
     }
 
+
+
+}
+
+/************ midterlinje  ***************/
+
+@media screen and (min-width: 1200px) {
+
+    .midterlinje {
+        position: relative;
+    }
+
+
+    .midterlinje::after {
+        content: '';
+        position: absolute;
+        width: 1px;
+        background-color: black;
+        top: 113px;
+        bottom: 120px;
+        left: 50%;
+        margin-left: -1px;
+    }
 
 
 }
