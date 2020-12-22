@@ -190,6 +190,7 @@ nav a:hover {
     font-size: 1rem;
     letter-spacing: 0.04rem;
     line-height: 2rem;
+    text-decoration: underline;
 }
 
 
